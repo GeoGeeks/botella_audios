@@ -6,17 +6,29 @@
   html, body {
     margin: 0;
     padding: 0;
-    background: transparent !important; /* Fondo transparente */
+    background: transparent !important;
   }
 
-  /* Obligamos modo CLARO → iconos negros */
   :root { 
     color-scheme: light;
   }
 
+  .audio-container {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    background: transparent;
+  }
+
+  #btnRepetir {
+    width: 35px;   /* ajusta tamaño si quieres */
+    cursor: pointer;
+    margin-right: -10px;
+  }
+
   audio { 
     width: 100%; 
-    background: transparent !important; /* Transparente también */
+    background: transparent !important;
   }
 
   audio::-webkit-media-controls,
@@ -29,8 +41,28 @@
 </head>
 
 <body>
-  <audio controls loop>
+
+<div class="audio-container">
+  
+  <!-- BOTÓN PERSONALIZADO -->
+  <img src="replay_icon.png" id="btnRepetir" alt="Repetir">
+
+  <!-- REPRODUCTOR -->
+  <audio id="miAudio" controls loop>
     <source src="https://raw.githubusercontent.com/Sphirox/ESRI-Botella/main/quienfuera.mp3" type="audio/mpeg">
   </audio>
+
+</div>
+
+<script>
+  const audio = document.getElementById("miAudio");
+  const boton = document.getElementById("btnRepetir");
+
+  boton.addEventListener("click", function() {
+    audio.currentTime = 0;
+    audio.play();
+  });
+</script>
+
 </body>
 </html>
