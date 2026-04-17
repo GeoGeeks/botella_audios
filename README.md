@@ -123,7 +123,7 @@ botella-al-mar/
 
 ### Prueba Local
 
-**Opción 1 - Servidor HTTP simple**:
+**Servidor HTTP simple**:
 ```bash
 # Python 3
 python -m http.server 8000
@@ -133,16 +133,6 @@ python -m http.server 8000
 # http://localhost:8000/audio2.html
 # http://localhost:8000/fecha.html
 ```
-
-**Opción 2 - VS Code Live Server**:
-1. Instalar extensión "Live Server"
-2. Clic derecho en archivo → "Open with Live Server"
-3. Recarga automática al editar
-
-**Opción 3 - Abrir directamente**:
-- Simplemente arrastra los archivos `.html` a tu navegador
-- Los recursos externos (MP3 desde GitHub) se cargarán automáticamente
-
 ---
 
 ## 🎯 Casos de Uso
